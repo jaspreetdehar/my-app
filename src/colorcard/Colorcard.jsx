@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from 'react'
+
 
 export default function Colorcard() {
   const colors = ["red", "blue", "green", "yellow", "purple", "orange",];
@@ -7,20 +8,17 @@ export default function Colorcard() {
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
   };
-  //   const cardstyle=()=>{
-  //     backgroundColor = colorchnge()
-  //   }
+const [color, setColor] = useState(colorchnge())
+  
+const clickCard=()=>{
+  setColor(colorchnge)
+}
+
   return (
     <>
-        <div className="container">
-       
-          <div className="card" style={{ backgroundColor: colorchnge() }}>
-            <h3>dsds</h3>
-          </div>
-           
-         
-     
-      </div>
+      <div className="card" onClick={clickCard} style={{ backgroundColor:color,width:"100px",height:"100px"}}>
+      <h3 style={{alignItems:"center",textAlign:"center"}}>Dehar</h3>
+      </div>    
     </>
   );
 }

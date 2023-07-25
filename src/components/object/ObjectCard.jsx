@@ -3,13 +3,17 @@ import "./Objectstyle.css";
 import image from "../../images/clapperboard.af8208f69a1a6b200f2a.png";
 import image1 from "../../images/star.7f931ce5854754318386.png";
 import image2 from "../../images/clock.a583f4433036c727fbab.png";
-export default function ObjectCard(a) {
+import Dil from "../../dil/Dil";
+export default function ObjectCard(a,props) {
+  // console.log(a)
   return (
     <>
+  
       <div className="col-md-4">
-        <div className="card">
-          <div className="card-image">
+        <div className="card" style={{backgroundColor: props.mode === 'light' ? 'grey' :'dark',color: props.mode === 'light' ? 'red' : 'black'}}>
+          <div className="card-image" style={{position:"relative"}}>
             <img src={a.image} className="card-img-top img-fluid" alt="..." />
+             <div className="heart" style={{position:"absolute",top: "10px",right: "10px",height: "10px"}}>{<Dil/>}</div> 
           </div>
           <div className="card-body">
             <div className="movies-title d-flex justify-content-between">

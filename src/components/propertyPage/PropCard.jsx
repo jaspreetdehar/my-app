@@ -1,21 +1,43 @@
-// import './App.css'
+import React from "react";
 
-export default function PropCard() {
-<div className="container">
-    <div className="card">
-        <div className="card-image">
-            <img src={require('../../images/prop-1.jpg')} alt="" />
-        </div>
-        <div className="card-content">
-            <h3>Desert Yurt</h3>
+export default function PropCard({
+  name,
+  rating,
+  price,
+  img,
+  offprice,
+  available,
+})
+ {
+  const discount = Math.floor((offprice / price) * 100);
+  return (
+    <>
+      <div className="col-md-4">
+        <div className="card">
+          <div className="card-image">
+            <img src={img} alt="" />
+          </div>
+          <div className="card-content">
+            <h3>{name}</h3>
             <div className="price">
-                <span className="rating">
-                    4.9
-                </span>
-                <span className="prize">$200</span>
-                <a href="#"></a>
+              <span className="rating">
+                {rating}
+              </span>
+              <span className="prize pl-1">
+              <strong>Price: ${price}</strong>
+              {offprice && (<span className="offprice">${offprice}</span>)}
+              </span>
             </div>
+              {offprice &&(<span className="discount">Discount: {discount}%</span>)}
+            <a
+              href="#"
+              className="btn btn-outline-success mt-4"
+            >
+              View Details
+            </a>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+    </>
+  );
 }

@@ -1,0 +1,11 @@
+.catoon{padding: 80px 50px;}
+.catoon .card .card-image{height: 500px;overflow: hidden;}
+.catoon .card .card-image img{height: 100%;object-fit: cover;}
+.catoon .card .card-body{padding: 20px;}
+.catoon .card .card-body h3{font-size: 18px;font-weight: 700;}
+.catoon .card .card-body .movie-desc{font-weight: 600;line-height: 20px;}
+.catoon .card .card-body .geners{display: flex;gap: 10px;}
+.catoon .card .card-body .geners span{padding: 7px 26px;font-size: 14px; background: #000;color: #fff;border-radius: 15px;}
+.catoon .card .card-body .movies-info{align-items: center;display: flex;justify-content: space-between;}
+.catoon .card .card-body .movies-info span{width: 10%;height: 10%;font-size: 15px;}
+.catoon .card .card-body .movies-info span img{height: 47%;width: 20%;align-content: center;text-align: center;}
